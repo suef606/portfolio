@@ -1,0 +1,30 @@
+name: Vercel 배포
+
+on:
+  push:
+    branches:
+      - main  # 또는 master, 혹은 배포하고 싶은 브랜치 이름
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Node.js 설정
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20  # 프로젝트의 Node.js 버전
+          
+      - name: 의존성 설치
+        run: yarn install
+        
+      - name: Vercel CLI 설치
+        run: yarn global add vercel
+        
+      - name: Vercel 배포
+        run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
