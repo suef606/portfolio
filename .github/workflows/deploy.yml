@@ -18,3 +18,4 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-args: '--prod'
+          comment-on-github: false  # PR 코멘트 기능 비활성화
