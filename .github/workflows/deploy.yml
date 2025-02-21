@@ -17,5 +17,5 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-comment: false  # 옵션명 수정
           vercel-args: '--prod'
-          comment-on-github: false  # PR 코멘트 기능 비활성화
