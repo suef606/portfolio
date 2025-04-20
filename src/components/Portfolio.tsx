@@ -7,9 +7,9 @@ import AboutSection from './AboutSection';
 
 // React.lazy 사용하여 코드 스플리팅 - 초기 로딩 성능 향상
 const ProjectsSection = lazy(() => import('./ProjectsSection'));
-const SkillsSection = lazy(() => import('./SkillsSection'));
 const ExperienceSection = lazy(() => import('./ExperienceSection'));
 const AwardsSection = lazy(() => import('./AwardsSection'));
+const SkillsSection = lazy(() => import('./SkillsSection'));
 const ContactSection = lazy(() => import('./ContactSection'));
 const Footer = lazy(() => import('./Footer'));
 
@@ -92,13 +92,13 @@ const Portfolio = () => {
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <AboutSection darkMode={darkMode} />
       
-      {/* Suspense로 감싸서 코드 스플리팅된 컴포넌트 로딩 처리 */}
+      {/* 네비바 순서에 맞게 섹션 순서 변경 */}
       <Suspense fallback={<SectionLoading />}>
         <ProjectsSection darkMode={darkMode} />
       </Suspense>
       
       <Suspense fallback={<SectionLoading />}>
-        <SkillsSection darkMode={darkMode} />
+        <ExperienceSection darkMode={darkMode} />
       </Suspense>
       
       <Suspense fallback={<SectionLoading />}>
@@ -106,7 +106,7 @@ const Portfolio = () => {
       </Suspense>
       
       <Suspense fallback={<SectionLoading />}>
-        <ExperienceSection darkMode={darkMode} />
+        <SkillsSection darkMode={darkMode} />
       </Suspense>
       
       <Suspense fallback={<SectionLoading />}>

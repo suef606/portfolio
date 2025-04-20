@@ -36,7 +36,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
             <div className="bg-blue-100 p-6 rounded-lg shadow-lg">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">기술 키워드</h2>
               <div className="flex flex-wrap">
-                {['Next.js', 'React', 'TypeScript', 'Zustand', 'React Hook Form', 'Tailwind CSS', 'CI/CD', 'UX 기획'].map((tech) => (
+                {['UX 기획','UI 디자인', 'Next.js', 'React', 'TypeScript', 'Zustand', 'React Hook Form', 'Tailwind CSS', 'CI/CD' ].map((tech) => (
                   <span key={tech} className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-medium m-1">
                     {tech}
                   </span>

@@ -45,9 +45,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
   const navItems = [
     { href: "#about", label: "소개" },
     { href: "#projects", label: "프로젝트" },
-    { href: "#skills", label: "기술 스택" },
-    { href: "#awards", label: "수상 및 대외 활동" },
     { href: "#experience", label: "경력" },
+    { href: "#awards", label: "수상 및 대외 활동" },
+    { href: "#skills", label: "기술 스택" },
     { href: "#contact", label: "연락처" }
   ];
 

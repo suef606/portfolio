@@ -29,10 +29,15 @@
   }
 
   body {
-    color: rgb(var(--foreground-rgb));
+    /* color: rgb(var(--foreground-rgb)); */ /* 이 부분을 주석 처리 */
     background: rgb(var(--background-start-rgb));
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     line-height: 1.5; /* 가독성 향상을 위한 기본 행간 설정 */
+  }
+
+  /* 프로젝트 카드 내 텍스트 색상 설정 */
+  .project-card-text {
+    @apply text-gray-800 dark:text-white;
   }
 
   /* 접근성 향상을 위한 포커스 스타일 */
